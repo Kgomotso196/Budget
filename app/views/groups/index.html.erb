@@ -1,0 +1,22 @@
+<div class="flex flex-col items-center mb-10">
+<%= render "header" %>
+  <% @groups.each_with_index do |group, index| %>
+    <% if current_user && group.user_id == current_user.id %>
+      <%= link_to group_entities_path(group.id), class: do %>
+      <div class="flex bg-slate-50 group-card rounded p-4 mt-4 w-94">
+        <%= image_tag group.icon, alt: 'icon', class: "w-28" %>
+
+        <div class="ml-5 grow text-gray-500 font-medium">
+          <p class="text-lg"><%= group.name %></p>
+          <p class="mt-14 text-xs"><%= group.created_at.strftime('%d %h %Y') %></p>
+        </div>
+
+        <p class="ml-16 grow-0 font-semibold">$<%= @total_amount[index] %> </p>
+      </div>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+  <div class="bg-green-400 button_down text-slate-50 text-center fixed bottom-0 py-2 w-full">
+    <%= link_to 'Add new category', new_group_path, class: "in_button_down border-2 border-slate-50 py-1 px-28" %>
+  </div>

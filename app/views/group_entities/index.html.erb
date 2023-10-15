@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Group entities</h1>
+
+<div id="group_entities">
+  <% @group_entities.each do |group_entity| %>
+    <%= render group_entity %>
+    <p>
+      <%= link_to "Show this group entity", group_entity %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New group entity", new_group_entity_path %>

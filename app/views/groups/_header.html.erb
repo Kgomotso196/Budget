@@ -1,0 +1,60 @@
+<div class="flex justify-between w-96 bg-sky-500 p-4 text-slate-50 fixed top-0 py-2 w-full">
+  <%= image_tag ('all/hamburger-icon.png'), class: "w-8 h-8 toggleMenu" %>
+  <div>
+    <h3>CATEGORIES</h3>
+    <p class="text-sm ml-5 mt-5">Most recent</p>
+  </div>
+  <%= image_tag ('all/search-icon.png'), class: "w-8 h-8" %>
+</div>
+
+<% if user_signed_in? %>
+<div class="offcanvas bg-sky-500 fixed top-0 left-0 z-40 w-64 h-screen transition-transform hidden" id="offcanvasMenu">
+      <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 mx-20 mt-10"  id="closeMenu">
+              <span class="sr-only">Close menu</span>
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+      <div class="h-full px-3 py-4 overflow-y-auto">
+      <ul class="space-y-2 font-medium">
+         <li>
+            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+
+            <%= link_to "Visit Group", groups_path, class: "action text-slate-50 flex-1 ml-3 whitespace-nowrap" %>
+            </a>
+         </li>
+         <li>
+            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+
+               <%= link_to "Create Group", new_group_path, class: "action text-slate-50 flex-1 ml-3 whitespace-nowrap" %>
+            </a>
+         </li>
+
+         <li>
+            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+
+               <%= link_to "Account Settings", edit_user_registration_path, class: "action text-slate-50 flex-1 ml-3 whitespace-nowrap" %>
+            </a>
+         </li>
+
+         <li>
+            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
+
+               <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "text-slate-50 flex-1 ml-3 whitespace-nowrap" %>
+            </a>
+         </li>
+
+      </ul>
+   </div>
+  </div>
+<% end %>
+
+<script>
+  document.querySelector('.toggleMenu').addEventListener('click', function() {
+    document.getElementById('offcanvasMenu').classList.toggle('hidden');
+  });
+
+  document.getElementById('closeMenu').addEventListener('click', function() {
+    document.getElementById('offcanvasMenu').classList.toggle('hidden');
+  });
+</script>
