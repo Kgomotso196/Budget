@@ -68,13 +68,13 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://google.com)
+- [Live Demo Link](https://budget-app-d2td.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🎥 Video Demo<a name="video-demo"></a>
 
-- [Video Demo Link](https://google.com)
+- [Video Demo Link](https://drive.google.com/file/d/1SAb2R4KvhCkoPkM9eGz5ZdYJhtqQySjR/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
