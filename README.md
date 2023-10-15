@@ -169,6 +169,8 @@ If you like this project, I kindly request you to show your support by giving it
 
 I would like to thank Microverse for proposing this project, and extend my heartfelt gratitude to my fellow programmers for their assistance whenever possible.
 
+Another special Shout Out to [Gregoire Vella from Behance](https://www.behance.net/gregoirevella) for this skeleton.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
