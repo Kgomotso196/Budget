@@ -1,0 +1,28 @@
+<div class="flex flex-col items-center mb-20">
+<div class="flex w-96 bg-sky-500 p-4 text-slate-50 fixed top-0 py-2 w-full">
+<%= link_to group_entities_path(params[:group_id]) do %>
+  <%= image_tag ('all/back-icon.png'), class: "w-6 h-6" %>
+  <% end %>
+    <h3 class="ml-28">CREATE</h3>
+</div>
+  <h3 class="text-sky-400 text-xl font-bold mb-6 mt-4"> Add a new transaction</h3>
+  <%= form_with url: group_entities_path(params[:group_id]), scope: :entity do |form| %>
+    <div>
+    <%= form.label :Name %><br>
+    <%= form.text_field :name, class: 'mt-2 w-56 p-1 rounded', require: true %>
+    </div>
+
+    <div class="mt-2">
+    <%= form.label :amount %><br>
+    <%= form.number_field :amount, class: 'mt-2 w-56 p-1 rounded', require: true %>
+    </div>
+
+    <div class="mt-2">
+      <%= form.label :group_id %><br>
+      <%= form.collection_select :group_id, Group.where(user_id: current_user.id), :id, :name, {prompt: "Select a group"}, class: 'mt-2 w-56 p-1 rounded' %>
+    </div>
+
+    <%= form.submit "Submit", class: "bg-sky-400 p-2 rounded text-slate-50 mt-4" %>
+    <%= link_to 'Back', group_entities_path(params[:group_id]), class: "bg-sky-400 rounded text-slate-50 mt-4 ml-20 px-4 py-3" %>
+  <% end %>
+</div>
