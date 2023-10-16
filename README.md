@@ -74,7 +74,7 @@
 
 ## 🎥 Video Demo<a name="video-demo"></a>
 
-- [Video Demo Link](https://drive.google.com/file/d/1SAb2R4KvhCkoPkM9eGz5ZdYJhtqQySjR/view?usp=sharing)
+- [Video Demo Link](https://drive.google.com/file/d/1rwB92jBfBHANgmsyBeKw4_pltfRxLCrx/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
