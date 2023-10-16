@@ -27,6 +27,9 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "mt-2 w-56 p-1 rounded" %>
   </div>
 
+  <div class="actions">
+    <%= f.submit "Sign up", class: "bg-green-400 p-2 rounded text-slate-50 mt-4" %>
+  </div>
 <% end %>
 <%= render "devise/shared/links" %>
 
