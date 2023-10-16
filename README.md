@@ -173,7 +173,7 @@ Another special Shout Out to [Gregoire Vella from Behance](https://www.behance.n
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
+## ❓ FAQ <a name="faq"></a>
 
 - **How can I log in to my account?**
 
